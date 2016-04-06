@@ -13,6 +13,7 @@ public class FieldExample {
 
         Person person = new Person();
         Class<? extends Person> personClass = person.getClass();
+        //getDeclaredFields does not return the fields of parent class
         Field[] declaredFields = personClass.getDeclaredFields();
         for(Field field: declaredFields){
             System.out.println("Field Name is " + field.getName());
